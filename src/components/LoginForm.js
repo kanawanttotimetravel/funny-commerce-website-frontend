@@ -3,7 +3,6 @@
 import {useFormState} from 'react-dom'
 
 import FormInput from "@/components/FormInput";
-import signUp from "@/apis/signUp";
 import logIn from "@/apis/logIn";
 
 const LoginForm = () => {
@@ -26,6 +25,7 @@ const FormStyle = {
   flexDirection: 'column',
   gap: '0.5rem'
 }
+
 const ButtonStyle = {
   display: 'flex',
   flexDirection: 'row',

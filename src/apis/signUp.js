@@ -37,18 +37,18 @@ const signUp = async (state, formData) => {
     }
   }
   console.log(validatedFields.data)
-  // axios({
-  //   url: 'http://localhost:5000/register',
-  //   method: 'post',
-  //   data: {
-  //     name: name,
-  //     password: password
-  //   }
-  // }).then(() => {
-  //   console.log('Request sent!')
-  // }, () => {
-  //   console.log('FAILURE!')
-  // })
+  axios({
+    url: 'http://localhost:5000/register',
+    method: 'post',
+    data: {
+      name: validatedFields.data.name,
+      password: validatedFields.data.password
+    }
+  }).then(() => {
+    console.log('Request sent!')
+  }, () => {
+    console.log('FAILURE!')
+  })
   console.log('Success!')
   return validatedFields;
 }
