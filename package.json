@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.3.7",
     "axios": "^1.6.8",
     "next": "14.2.3",
     "next-auth": "^5.0.0-beta.17",
