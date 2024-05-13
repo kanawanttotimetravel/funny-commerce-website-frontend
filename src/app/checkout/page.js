@@ -82,12 +82,12 @@ function CheckOutPage() {
               </span>
               <span className="text-wrapper-19">privacy policy.</span>
             </p>
-            <div className="group-14">
+            {/* <div className="group-14">
               <input type="radio" className="text-wrapper-21"/>
             </div>
             <div className="group-15">
             <input type="radio" className="text-wrapper-21"/>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
