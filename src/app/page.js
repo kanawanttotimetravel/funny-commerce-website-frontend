@@ -4,6 +4,7 @@ import Link from "next/link";
 import ProductSection from "@/components/ProductSection";
 
 export default function Home() {
+
   return <>
     {/*<Header></Header>*/}
     <ProductSection></ProductSection>
