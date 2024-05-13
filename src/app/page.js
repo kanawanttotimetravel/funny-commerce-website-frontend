@@ -13,7 +13,7 @@ export default function Home() {
       <div>
         What the hell
       </div>
-    </Link>
+      </Link>
   </>
 }
 
