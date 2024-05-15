@@ -2,7 +2,7 @@
 
 import {useFormState} from 'react-dom'
 
-import FormInput from "@/components/FormInput";
+import FormInput from "@/components/Authentication/FormInput";
 import signUp from "@/apis/signUp";
 
 const SignUpForm = () => {

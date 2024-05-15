@@ -76,7 +76,7 @@ const ItemCard = ({imageSrc, itemName, itemType, price}) => {
 const CardStyle = {
   display: 'flex',
   flexDirection: 'column',
-  width: '10rem',
+  width: '15rem',
   height: '21rem',
   backgroundColor: 'blue',
   margin: '1rem',

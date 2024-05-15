@@ -1,4 +1,4 @@
-import SignUpForm from "@/components/SignUpForm";
+import SignUpForm from "@/components/Authentication/SignUpForm";
 const RegisterPage = () => {
   return (
     <div style={{
