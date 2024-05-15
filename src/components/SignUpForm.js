@@ -69,7 +69,19 @@ const SignUpForm = () => {
           </p>
         </div>
       )}
-
+      {state && state.error && (
+        <div style={{
+          padding: 0,
+          margin: 0,
+        }}>
+          <p style={{
+            padding: 0,
+            margin: 0,
+          }}>
+            {state.error}
+          </p>
+        </div>
+      )}
     </form>
   )
 }

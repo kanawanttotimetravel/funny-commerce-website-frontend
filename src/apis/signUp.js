@@ -1,4 +1,6 @@
 'use server'
+
+import 'dotenv/config'
 import {console} from "next/dist/compiled/@edge-runtime/primitives";
 import {z} from 'zod'
 import axios from "axios";
@@ -40,19 +42,32 @@ const signUp = async (state, formData) => {
     }
   }
 
-  await axios({
-    url: 'http://localhost:5000/register',
+  const registerStatus = await axios({
+    url: process.env.HOST||'http://localhost:5000/register',
     method: 'post',
     data: {
-      name: validatedFields.data.name,
+      username: validatedFields.data.name,
       password: validatedFields.data.password
     }
   }).then((res) => {
+    if (res.data['message'] !== 'ok') {
+      return {
+        message: res.data['message']
+      }
+    }
     userId = res.data['userId']['$oid']
-    console.log(userId)
-  }, () => {
-    console.log('FAILURE!')
+    return {
+      message: 'ok'
+    }
+  }).catch((err) => {
+    console.log(err)
   })
+
+  if (registerStatus.message !== 'ok') {
+    return {
+      error: registerStatus.message
+    }
+  }
   if (userId === null) {
     // console.log('hihi')
     return {

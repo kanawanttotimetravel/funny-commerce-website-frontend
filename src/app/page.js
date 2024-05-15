@@ -7,7 +7,7 @@ import {redirect} from "next/navigation";
 
 const Home = async () => {
   const session = await getSession()
-  console.log(session)
+  // console.log(session)
   if (!session) {
     redirect('/register')
   }
