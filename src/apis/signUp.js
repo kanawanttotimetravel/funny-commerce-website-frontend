@@ -55,7 +55,7 @@ const signUp = async (state, formData) => {
         message: res.data['message']
       }
     }
-    userId = res.data['userId']['$oid']
+    userId = res.data['userId']
     return {
       message: 'ok'
     }
@@ -75,14 +75,7 @@ const signUp = async (state, formData) => {
     }
   }
 
-  await createSession(userId).then(
-    () => {
-      console.log('Session created!')
-    }, () => {
-      console.log('Session failed!')
-    }
-  )
-  redirect('/')
+  redirect('/login')
 
   // return validatedFields;
 }

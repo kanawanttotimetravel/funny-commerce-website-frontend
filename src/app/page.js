@@ -9,7 +9,7 @@ const Home = async () => {
   const session = await getSession()
   // console.log(session)
   if (!session) {
-    redirect('/register')
+    redirect('/login')
   }
   return <>
     {/*<Header></Header>*/}

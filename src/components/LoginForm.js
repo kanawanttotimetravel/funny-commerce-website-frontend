@@ -14,7 +14,7 @@ const LoginForm = () => {
       </FormInput>
       <FormInput name={"password"} placeholder={"PASSWORD"} type={"password"}>
       </FormInput>
-      <button style={ButtonStyle} type="submit">Sign Up</button>
+      <button style={ButtonStyle} type="submit">Login</button>
 
     </form>
   )
