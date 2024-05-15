@@ -35,4 +35,14 @@ export const createSession = async (userId) => {
     path: '/',
   })
 }
+export const deleteSession = async () => {
+  cookies().delete('session')
+}
 
+export const getSession = async () => {
+  const session = cookies().get('session')?.value
+  if (!session) {
+    return null
+  }
+  return await decrypt(session)
+}

@@ -39,7 +39,7 @@ const signUp = async (state, formData) => {
       formErrors: validatedFields.error.flatten().formErrors
     }
   }
-  // console.log(validatedFields.data)
+
   await axios({
     url: 'http://localhost:5000/register',
     method: 'post',
@@ -59,6 +59,7 @@ const signUp = async (state, formData) => {
       message: 'Register failed!'
     }
   }
+
   await createSession(userId).then(
     () => {
       console.log('Session created!')
