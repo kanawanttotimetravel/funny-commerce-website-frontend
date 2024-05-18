@@ -10,40 +10,40 @@ import {
 function Header() {
     return (
         <div className="header">
-            <div className="group">
-                <div className="overlap-group">
-                    <div className="div">
-                        <div className="text-wrapper">Home</div>
-                        <div className="text-wrapper-2">Shop</div>
-                        <div className="text-wrapper-3">About</div>
-                        <div className="text-wrapper-4">Contact</div>
-                    </div>
-                    <div className="group-2">
-                        <AlertOutlined 
-                        className="mdi-account-alert" 
-                        alt="alert"
-                        />
-                        <SearchOutlined 
-                        className="akar-icons-search" 
-                        alt="search"
-                        />
-                        <HeartOutlined 
-                        className="akar-icons-heart" 
-                        alt="heart"
-                        />
-                        <ShoppingCartOutlined
-                            className="ant-design-shopping"
-                            alt="shopping"
-                        />
-                        <div className="frame">
-                            <img className="funny-commerce-logos" alt="FunnyCommerceLogos" src="" />
-                            <img className="skin-clinic" alt="Skin clinic" src="" />
-                        </div>
-                    </div>
-                </div>
+            <div className="logo">
+                    <img className="funny-commerce-logos" alt="FunnyCommerceLogos" src="src\components\headercomponent\logouet.png"/>
+                    <img className="skin-clinic" alt="Skin clinic" src="" />
             </div>
+            <div className="hcenter">
+                <ul className="hlist">
+                    <li><div className="text-wrapper">Home</div></li>
+                    <li><div className="text-wrapper">Shop</div></li>
+                    <li><div className="text-wrapper">About</div></li>
+                    <li><div className="text-wrapper">Contact</div></li>
+                </ul>
+            </div>
+            <div className="hright">
+                <ul className="hlist">
+                    <li><AlertOutlined 
+                        className="icon" 
+                        alt="alert"
+                    /></li>
+                    <li><SearchOutlined 
+                        className="icon" 
+                        alt="search"
+                    /></li>
+                    <li><HeartOutlined 
+                        className="icon"
+                        alt="heart"
+                    /></li>
+                    <li><ShoppingCartOutlined
+                        className="icon"
+                        alt="shopping"
+                    /></li>
+                </ul>
+            </div> 
         </div>
     );
-};
+};  
 
 export default Header;
