@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import Header from "@/components/headercomponent/HeaderComponent"
 import ProductSection from "@/components/ProductSection";
 import {getSession} from "@/apis/session";
 import {redirect} from "next/navigation";
@@ -15,7 +16,7 @@ const Home = async () => {
     redirect('/login')
   }
   return <>
-    {/*<Header></Header>*/}
+    <Header></Header>
     <div style={{
       display: 'flex',
       justifyContent: 'center',

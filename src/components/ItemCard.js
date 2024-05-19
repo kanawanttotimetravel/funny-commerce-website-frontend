@@ -10,7 +10,7 @@
  */
 import {Poppins} from "next/font/google";
 
-const poppins = Poppins({subsets: ['latin'], weight:"400"})
+const poppins = Poppins({subsets: ['latin'], weight: "400"})
 
 const ItemCard = ({imageSrc, itemName, itemType, price}) => {
   return <div style={CardStyle}>
@@ -28,8 +28,9 @@ const ItemCard = ({imageSrc, itemName, itemType, price}) => {
           height: '100%',
           width: '100%',
           objectFit: 'cover',
-          margin:'0',
-          padding:'0'
+          margin: '0',
+          padding: '0',
+          display: 'block',
         }}
       >
       </img>
@@ -37,7 +38,7 @@ const ItemCard = ({imageSrc, itemName, itemType, price}) => {
     <div style={{
       height: '30%',
       padding: '1rem',
-      margin:'0',
+      margin: '0',
       backgroundColor: '#F4F5F7'
     }}>
       <p style={{
@@ -74,13 +75,13 @@ const ItemCard = ({imageSrc, itemName, itemType, price}) => {
 }
 
 const CardStyle = {
-  display: 'flex',
+  display: 'block',
   flexDirection: 'column',
   width: '15rem',
   height: '21rem',
   backgroundColor: 'blue',
   margin: '1rem',
-  padding:'0rem',
+  padding: '0rem',
   className: poppins.className,
 }
 

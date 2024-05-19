@@ -12,7 +12,13 @@ const ProductSection = () => {
     itemName: 'Kurisu',
     itemType: 'my wife',
     price: 10000,
-  }])
+  }, {
+    imageSrc: null,
+    itemName: 'Uncle Ho',
+    itemType: 'leader',
+    price: 10000,
+  }
+  ])
   const updateProduct = () => {
 
   }
