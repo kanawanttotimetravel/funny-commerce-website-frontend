@@ -12,6 +12,19 @@
     left: 8%;
 }
 
+.header .logo >p{
+    color: #000000;
+    font-family: "Montserrat-Bold", Helvetica;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.header .logo >p:active {
+    color: grey;
+}
+
 .header .hcenter {
     display: flex;
     justify-content: center;

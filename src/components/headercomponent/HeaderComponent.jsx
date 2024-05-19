@@ -11,8 +11,7 @@ function Header() {
     return (
         <div className="header">
             <div className="logo">
-                    <img className="funny-commerce-logos" alt="FunnyCommerceLogos" src="src\components\headercomponent\logouet.png"/>
-                    <img className="skin-clinic" alt="Skin clinic" src="" />
+                    <p>Drakon</p>
             </div>
             <div className="hcenter">
                 <ul className="hlist">
