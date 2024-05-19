@@ -17,27 +17,31 @@ function Header() {
             </div>
             <div className="hcenter">
                 <ul className="hlist">
-                    <li><div className="text-wrapper">Home</div></li>
-                    <li><div className="text-wrapper">Shop</div></li>
-                    <li><div className="text-wrapper">About</div></li>
-                    <li><div className="text-wrapper">Contact</div></li>
+                    <li><button onClick={''} className="text-wrapper">Home</button></li>
+                    <li><button onClick={''} className="text-wrapper">Shop</button></li>
+                    <li><button onClick={''} className="text-wrapper">About</button></li>
+                    <li><button onClick={''} className="text-wrapper">Contact</button></li>
                 </ul>
             </div>
             <div className="hright">
                 <ul className="hlist">
-                    <li><AlertOutlined 
+                    <li><AlertOutlined  
+                        onClick={''}
                         className="icon" 
                         alt="alert"
                     /></li>
                     <li><SearchOutlined 
+                        onClick={''}
                         className="icon" 
                         alt="search"
                     /></li>
                     <li><HeartOutlined 
+                        onClick={''}
                         className="icon"
                         alt="heart"
                     /></li>
                     <li><ShoppingCartOutlined
+                        onClick={''}
                         className="icon"
                         alt="shopping"
                     /></li>
