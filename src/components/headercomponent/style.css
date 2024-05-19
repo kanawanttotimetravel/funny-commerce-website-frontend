@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     width: 100%;
+    border-bottom: 1px solid #d9d9d9;
 }
 
 .header .logo {
@@ -40,7 +41,7 @@
 }
 
 .header .hlist >li{
-    padding: 30px;
+    padding: 20px;
     list-style-type: none;
 }
 
@@ -51,6 +52,7 @@
 }
 
 .header .text-wrapper {
+    padding: 10px;
     background: none;
     border: none;
     color: #000000;
@@ -69,16 +71,4 @@
 
 .header .icon {
     cursor: pointer;
-}
-
-.header .funny-commerce-logos
-{
-    width: 20%; /* Đặt độ rộng cố định */
-    height: 20%; /* Đặt chiều cao cố định */
-}
-
-.header .funny-commerce-logos
-{
-    width: 20%; /* Đặt độ rộng cố định */
-    height: 20%; /* Đặt chiều cao cố định */
 }

@@ -40,6 +40,678 @@ const item_card = [
         itemName: "hello6",
         itemType: "abc",
         price:200
+    },
+    {
+        id:7,
+        imageSrc:"",
+        itemName: "hello7",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:8,
+        imageSrc:"",
+        itemName: "hello8",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:9,
+        imageSrc:"",
+        itemName: "hello9",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:10,
+        imageSrc:"",
+        itemName: "hello10",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:11,
+        imageSrc:"",
+        itemName: "hello11",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:12,
+        imageSrc:"",
+        itemName: "hello12",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:13,
+        imageSrc:"",
+        itemName: "hello13",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:14,
+        imageSrc:"",
+        itemName: "hello14",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello15",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
+    },
+    {
+        id:15,
+        imageSrc:"",
+        itemName: "hello",
+        itemType: "abc",
+        price:200
     }
 ]
 
