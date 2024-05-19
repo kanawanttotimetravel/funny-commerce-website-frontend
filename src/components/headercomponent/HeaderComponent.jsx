@@ -11,7 +11,9 @@ function Header() {
     return (
         <div className="header">
             <div className="logo">
-                    <p>Drakon</p>
+                <button onClick={''}>
+                    Drakon
+                </button>
             </div>
             <div className="hcenter">
                 <ul className="hlist">

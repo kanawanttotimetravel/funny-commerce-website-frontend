@@ -12,7 +12,9 @@
     left: 8%;
 }
 
-.header .logo >p{
+.header .logo >button {
+    background: none;
+    border: none;
     color: #000000;
     font-family: "Montserrat-Bold", Helvetica;
     font-size: 34px;
