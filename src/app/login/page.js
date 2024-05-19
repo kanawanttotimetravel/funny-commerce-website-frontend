@@ -1,5 +1,4 @@
 import LoginForm from "@/components/LoginForm";
-import Header from "@/components/headercomponent/HeaderComponent";
 const RegisterPage = () => {
   return (
     <div style={{

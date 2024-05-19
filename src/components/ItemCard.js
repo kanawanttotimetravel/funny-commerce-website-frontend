@@ -8,14 +8,17 @@
       ></ItemCard>
 
  */
+import {Poppins} from "next/font/google";
+
+const poppins = Poppins({subsets: ['latin'], weight:"400"})
 
 const ItemCard = ({imageSrc, itemName, itemType, price}) => {
   return <div style={CardStyle}>
     <div style={{
-      width: '17.8125rem',
-      height: '18.8125rem',
+      width: '100%',
+      height: '70%',
       margin: 0,
-      backgroundColor: 'green'
+      padding: 0,
     }}
     >
       <img
@@ -24,47 +27,46 @@ const ItemCard = ({imageSrc, itemName, itemType, price}) => {
         style={{
           height: '100%',
           width: '100%',
-          objectFit: 'cover'
+          objectFit: 'cover',
+          margin:'0',
+          padding:'0'
         }}
       >
       </img>
     </div>
     <div style={{
-      width: '17.8125rem',
-      height: '9.0625rem',
+      height: '30%',
       padding: '1rem',
+      margin:'0',
       backgroundColor: '#F4F5F7'
     }}>
       <p style={{
+        ...DescriptionStyle,
         color: '#3A3A3A',
-        fontFamily: 'Poppins',
         fontSize: '1.5rem',
         fontStyle: 'normal',
         fontWeight: '600',
-        lineHeight: '1.8rem'
       }}
       >
         {itemName}
       </p>
       <p style={{
+        ...DescriptionStyle,
         color: '#898989',
-        fontFamily: 'Poppins',
         fontSize: '1rem',
         fontStyle: 'normal',
         fontWeight: '500',
-        lineHeight: '1.5rem'
       }}>
         {itemType}
       </p>
       <p style={{
+        ...DescriptionStyle,
         color: '#3A3A3A',
-        fontFamily: 'Poppins',
         fontSize: '1.25rem',
         fontStyle: 'normal',
-        fontWeight: '600',
-        lineHeight: '1.875rem'
+        fontWeight: '400',
       }}>
-        VND {price}
+        {price} VND
       </p>
     </div>
 
@@ -74,9 +76,19 @@ const ItemCard = ({imageSrc, itemName, itemType, price}) => {
 const CardStyle = {
   display: 'flex',
   flexDirection: 'column',
-  width: '17.8125rem',
-  height: '27.875rem',
+  width: '15rem',
+  height: '21rem',
   backgroundColor: 'blue',
-  margin: '1rem'
+  margin: '1rem',
+  padding:'0rem',
+  className: poppins.className,
+}
+
+const DescriptionStyle = {
+  margin: 0,
+  lineHeight: '150%',
+  whiteSpace: 'nowrap',
+  overflow: 'hidden',
+  textOverflow: 'ellipsis'
 }
 export default ItemCard;

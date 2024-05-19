@@ -2,7 +2,7 @@
 
 import {useFormState} from 'react-dom'
 
-import FormInput from "@/components/FormInput";
+import FormInput from "@/components/Authentication/FormInput";
 import signUp from "@/apis/signUp";
 
 const SignUpForm = () => {
@@ -69,7 +69,19 @@ const SignUpForm = () => {
           </p>
         </div>
       )}
-
+      {state && state.error && (
+        <div style={{
+          padding: 0,
+          margin: 0,
+        }}>
+          <p style={{
+            padding: 0,
+            margin: 0,
+          }}>
+            {state.error}
+          </p>
+        </div>
+      )}
     </form>
   )
 }
