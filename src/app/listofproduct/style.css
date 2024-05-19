@@ -1,0 +1,19 @@
+.title {
+    color: #000000;
+    font-family: "Montserrat-SemiBold", Helvetica;
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+    text-align: center;
+   }
+   
+
+.item-display-container {
+    display: flex;
+    justify-content: center;
+}
+
+.item-display {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
