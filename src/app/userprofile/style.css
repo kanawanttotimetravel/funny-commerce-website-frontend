@@ -42,22 +42,6 @@
     margin: 16px;
   }
   
-  .edit-profile-form div {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .edit-profile-form label {
-    margin-bottom: 8px;
-  }
-  
-  .edit-profile-form input {
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
-  
   .save-button-container {
     display: flex;
     align-items: center;
