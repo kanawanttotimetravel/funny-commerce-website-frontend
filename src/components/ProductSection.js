@@ -1,36 +1,42 @@
 'use client'
 
 import ItemCard from "@/components/atomic/ItemCard";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {Poppins} from "next/font/google";
 import Link from "next/link";
 import axios from "axios";
 
 const poppins = Poppins({subsets: ['latin'], weight: "700"})
 
-const ProductSection = async () => {
-  const [productList, setProductList] = useState([{
-    itemId: '66498544e2f0592d8c8d9ebc',
-    imageSrc: 'drunkkurisu.jpg',
-    itemName: 'Kurisu',
-    itemType: 'my wife',
-    price: 10000,
-  }])
+const ProductSection =  () => {
+  const [productList, setProductList] = useState([])
   const [page, setPage] = useState(1)
 
   const updateProduct = async () => {
-      const ppp = await axios({
-      url: (process.env.HOST && `${process.env.HOST}/Product`) || 'http://localhost:5000/Product/page',
-      method: 'get',
-      data: {
-        page: page,
-        size: 16,
-      }}
+    console.log('HEHE')
+    const pl = await axios({
+        url: (process.env.HOST && `${process.env.HOST}/Product/page`) || 'http://localhost:5000/Product/page',
+        method: 'post',
+        data: {
+          page: page,
+          size: 16,
+        }
+      }
     )
-    console.log(ppp)
+    setProductList(pl.data)
+    return pl.data
   }
+
+  useEffect(() => {
+    updateProduct()
+  }, [page])
+
   return (
     <div style={sectionStyle}>
+      {/*<button onClick={() => {*/}
+      {/*  setPage(page + 1)*/}
+      {/*}}>HHH*/}
+      {/*</button>*/}
       {productList && productList.map((product) => (
         <li style={{
           listStyleType: 'none',
@@ -50,12 +56,12 @@ const ProductSection = async () => {
   )
 }
 
-  const sectionStyle = {
-    display: 'flex',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-    padding: 0,
-    margin: 0
-  }
-  export default ProductSection;
+const sectionStyle = {
+  display: 'flex',
+  flexDirection: 'row',
+  flexWrap: 'wrap',
+  justifyContent: 'center',
+  padding: 0,
+  margin: 0
+}
+export default ProductSection;
