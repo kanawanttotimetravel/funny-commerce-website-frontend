@@ -36,3 +36,45 @@
     border-radius: 4px;
   }
   
+  .edit-profile-form {
+    display: grid;
+    gap: 16px;
+    margin: 16px;
+  }
+  
+  .edit-profile-form div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .edit-profile-form label {
+    margin-bottom: 8px;
+  }
+  
+  .edit-profile-form input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .save-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .save-button {
+    background-color: #e5ff00e3;
+    color: rgb(61, 61, 61);
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    border: 1px solid #272727;
+  }
+  
+  .save-button:hover {
+    background-color: #9b9b9b;
+  }
