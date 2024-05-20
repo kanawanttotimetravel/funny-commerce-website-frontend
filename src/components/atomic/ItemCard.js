@@ -9,11 +9,12 @@
 
  */
 import {Poppins} from "next/font/google";
+import './style.css'
 
 const poppins = Poppins({subsets: ['latin'], weight: "400"})
 
 const ItemCard = ({imageSrc, itemName, itemType, price}) => {
-  return <div style={CardStyle}>
+  return <div style={CardStyle} className={'card'}>
     <div style={{
       width: '100%',
       height: '70%',
@@ -79,8 +80,7 @@ const CardStyle = {
   flexDirection: 'column',
   width: '15rem',
   height: '21rem',
-  backgroundColor: 'blue',
-  margin: '1rem',
+  margin: '2rem 1rem',
   padding: '0rem',
   className: poppins.className,
 }
@@ -92,4 +92,5 @@ const DescriptionStyle = {
   overflow: 'hidden',
   textOverflow: 'ellipsis'
 }
+
 export default ItemCard;

@@ -23,14 +23,14 @@
     grid-template-columns: repeat(4, 1fr);
 }
 
-.item-wrapper {
-    margin: 20px;
-}
+/*.item-wrapper {*/
+/*    margin: 20px;*/
+/*}*/
 
-.item-wrapper:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-}
+/*.item-wrapper:hover {*/
+/*    transform: scale(1.1);*/
+/*    cursor: pointer;*/
+/*}*/
 
 .show-more-button-container {
     display: flex;
