@@ -30,8 +30,8 @@ const UserProfile = ({ user, onSave }) => {
                         <UserProfileField label="Phone Number" value={user.phoneNumber} />
                         <UserProfileField label="Email" value={user.email} />
                         <UserProfileField label="Country / Region" value={user.country} />
-                        <UserProfileField label="Street" value={user.street} />
                         <UserProfileField label="Town / City" value={user.city} />
+                        <UserProfileField label="Street" value={user.street} />
                     </div>
                     <button className="edit-button" onClick={() => setIsEditing(true)}>Edit</button>
                 </>

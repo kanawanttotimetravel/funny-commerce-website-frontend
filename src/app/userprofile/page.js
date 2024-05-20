@@ -11,8 +11,8 @@ function UserProFilePage() {
         phoneNumber: "0124531",
         email: "abc@gmail.com",
         country: "Viet Nam",
-        street: "Xuan Thuy",
         city: "Ha Noi",
+        street: "Xuan Thuy",
         avatar: "https://antimatter.vn/wp-content/uploads/2022/05/hinh-anh-bac-ho.jpg"
     });
   
