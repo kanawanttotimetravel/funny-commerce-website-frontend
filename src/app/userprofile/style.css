@@ -1,0 +1,38 @@
+.profile-card {
+    border: 1px solid #ddd;
+    padding: 16px;
+    margin: 16px;
+  }
+  
+  .profile-header {
+    display: flex;
+    justify-content: left;
+    padding: 30px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #e4fd05;
+  }
+  
+  .avatar {
+    border-radius: 50%;
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .profile-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .edit-button {
+    background-color: #f0ad4e;
+    border: 1px solid #b1b1b1;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  

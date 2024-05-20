@@ -4,7 +4,8 @@ import {
     ShoppingCartOutlined,
     HeartOutlined,
     SearchOutlined,
-    AlertOutlined
+    AlertOutlined,
+    UserOutlined
 } from '@ant-design/icons';
 
 function Header() {
@@ -41,6 +42,11 @@ function Header() {
                         alt="heart"
                     /></li>
                     <li><ShoppingCartOutlined
+                        onClick={''}
+                        className="icon"
+                        alt="shopping"
+                    /></li>
+                    <li><UserOutlined
                         onClick={''}
                         className="icon"
                         alt="shopping"
