@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Header from "@/components/headercomponent/HeaderComponent";
-import ItemCard from "@/components/ItemCard";
+import ItemCard from "@/components/atomic/ItemCard";
 import Footer from "@/components/footer/footer";
 import item_card from "./productdata";
 import "./style.css";
