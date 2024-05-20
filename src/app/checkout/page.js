@@ -22,8 +22,11 @@ function CheckOutPage() {
   });
 
   const productList = Object.values(products).map(product => (
-    <div className="product-row" key={product.name}>
-      <p>{product.name} {product.quantity > 1 && `x${product.quantity}`}</p>
+    <div key={product.name} className="product-row">
+      <p className="product-name">
+        <span className="product-name-text">{product.name}</span>
+        {product.quantity > 1 && <span className="product-quantity"> x{product.quantity}</span>}
+      </p>
       <p>{product.price * product.quantity} VND</p>
     </div>
   ));
