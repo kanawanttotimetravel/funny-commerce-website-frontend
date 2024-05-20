@@ -3,6 +3,7 @@ import Footer from '@/components/footer/footer'
 import Header from '@/components/headercomponent/HeaderComponent'
 import React, { useState } from "react";
 import UserProfile from './UserProfile';
+import PurchaseHistory from './PurchaseHistory';
 
 function UserProFilePage() {
     const [user, setUser] = useState({
@@ -24,6 +25,7 @@ function UserProFilePage() {
         <div>
         <Header />
         <UserProfile user={user} onSave={handleSave} />
+        <PurchaseHistory/>
         <Footer />
         </div>
     );
