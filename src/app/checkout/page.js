@@ -4,6 +4,7 @@ import "./style.css";
 import Header from "@/components/headercomponent/HeaderComponent";
 import FormInputCustom from "@/components/FormInputCustom";
 import item_card from "../listofproduct/productdata";
+import Footer from "@/components/footer/footer";
 
 function CheckOutPage() {
   const products = {};
@@ -117,7 +118,7 @@ function CheckOutPage() {
           </div>
         </div>
       </div>
-      abc
+      <Footer/>
     </div>
   );
 };
