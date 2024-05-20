@@ -80,7 +80,7 @@ const CardStyle = {
   width: '15rem',
   height: '21rem',
   backgroundColor: 'blue',
-  margin: '1rem',
+  margin: '2rem 1rem',
   padding: '0rem',
   className: poppins.className,
 }
