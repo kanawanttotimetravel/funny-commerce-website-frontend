@@ -8,12 +8,11 @@ import axios from "axios";
 
 const poppins = Poppins({subsets: ['latin'], weight: "700"})
 
-const ProductSection =  () => {
+const ProductSection = () => {
   const [productList, setProductList] = useState([])
   const [page, setPage] = useState(1)
 
   const updateProduct = async () => {
-    console.log('HEHE')
     const pl = await axios({
         url: (process.env.HOST && `${process.env.HOST}/Product/page`) || 'http://localhost:5000/Product/page',
         method: 'post',
@@ -23,8 +22,8 @@ const ProductSection =  () => {
         }
       }
     )
-    setProductList(pl.data)
-    return pl.data
+    setProductList(pl.data.data)
+    // return pl.data.data
   }
 
   useEffect(() => {
@@ -32,28 +31,45 @@ const ProductSection =  () => {
   }, [page])
 
   return (
-    <div style={sectionStyle}>
-      {/*<button onClick={() => {*/}
-      {/*  setPage(page + 1)*/}
-      {/*}}>HHH*/}
-      {/*</button>*/}
-      {productList && productList.map((product) => (
-        <li style={{
-          listStyleType: 'none',
-          margin: 0,
-          padding: 0
-        }} key={product.itemName}>
-          <Link href={{
-            pathname: `/shop/${product.itemId}`,
-          }}>
-            <ItemCard imageSrc={product.imageSrc} itemName={product.itemName} itemType={product.itemType}
-                      price={product.price}>
-            </ItemCard>
-          </Link>
-        </li>))
-      }
+    <div>
+      <div style={sectionStyle}>
+        {productList && productList.map((product) => (
+          <li style={{
+            listStyleType: 'none',
+            margin: 0,
+            padding: 0
+          }} key={product.itemName}>
+            <Link href={{
+              pathname: `/shop/${product.itemId}`,
+            }}>
+              <ItemCard imageSrc={product.imageSrc} itemName={product.itemName} itemType={product.itemType}
+                        price={product.price}>
+              </ItemCard>
+            </Link>
+          </li>))
+        }
+      </div>
+      <div style={{
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        gap: '2rem',
+        margin: '2rem'
+      }}>
+        {page > 1 && <button style={buttonStyle} onClick={() => setPage(page - 1)} type="button">
+          PREV
+        </button>}
+        <button style={buttonStyle} onClick={() => setPage(page + 1)} type="button">
+          NEXT
+        </button>
+      </div>
     </div>
   )
+}
+
+const buttonStyle = {
+  width: '4rem',
+  height: '4rem',
 }
 
 const sectionStyle = {
