@@ -1,4 +1,6 @@
 'use server'
+
+import 'dotenv/config'
 import {console} from "next/dist/compiled/@edge-runtime/primitives";
 import {z} from 'zod'
 import axios from "axios";
@@ -13,7 +15,7 @@ const SignUpFormSchema = z.object({
 
   password: z
   .string()
-  .min(8, {message: 'Be at least 8 characters long'})
+  .min(4, {message: 'Be at least 4 characters long'})
   .regex(/[a-zA-Z]/, {message: 'Contain at least one letter.'})
   .regex(/[0-9]/, {message: 'Contain at least one number.'})
   .trim(),
@@ -39,34 +41,41 @@ const signUp = async (state, formData) => {
       formErrors: validatedFields.error.flatten().formErrors
     }
   }
-  // console.log(validatedFields.data)
-  await axios({
-    url: 'http://localhost:5000/register',
+
+  const registerStatus = await axios({
+    url: process.env.HOST||'http://localhost:5000/register',
     method: 'post',
     data: {
-      name: validatedFields.data.name,
+      username: validatedFields.data.name,
       password: validatedFields.data.password
     }
   }).then((res) => {
-    userId = res.data['userId']['$oid']
-    console.log(userId)
-  }, () => {
-    console.log('FAILURE!')
+    if (res.data['message'] !== 'ok') {
+      return {
+        message: res.data['message']
+      }
+    }
+    userId = res.data['userId']
+    return {
+      message: 'ok'
+    }
+  }).catch((err) => {
+    console.log(err)
   })
+
+  if (registerStatus.message !== 'ok') {
+    return {
+      error: registerStatus.message
+    }
+  }
   if (userId === null) {
     // console.log('hihi')
     return {
       message: 'Register failed!'
     }
   }
-  await createSession(userId).then(
-    () => {
-      console.log('Session created!')
-    }, () => {
-      console.log('Session failed!')
-    }
-  )
-  redirect('/')
+
+  redirect('/login')
 
   // return validatedFields;
 }

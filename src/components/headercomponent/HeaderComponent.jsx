@@ -4,46 +4,57 @@ import {
     ShoppingCartOutlined,
     HeartOutlined,
     SearchOutlined,
-    AlertOutlined
+    AlertOutlined,
+    UserOutlined
 } from '@ant-design/icons';
 
 function Header() {
     return (
         <div className="header">
-            <div className="group">
-                <div className="overlap-group">
-                    <div className="div">
-                        <div className="text-wrapper">Home</div>
-                        <div className="text-wrapper-2">Shop</div>
-                        <div className="text-wrapper-3">About</div>
-                        <div className="text-wrapper-4">Contact</div>
-                    </div>
-                    <div className="group-2">
-                        <AlertOutlined 
-                        className="mdi-account-alert" 
-                        alt="alert"
-                        />
-                        <SearchOutlined 
-                        className="akar-icons-search" 
-                        alt="search"
-                        />
-                        <HeartOutlined 
-                        className="akar-icons-heart" 
-                        alt="heart"
-                        />
-                        <ShoppingCartOutlined
-                            className="ant-design-shopping"
-                            alt="shopping"
-                        />
-                        <div className="frame">
-                            <img className="funny-commerce-logos" alt="FunnyCommerceLogos" src="" />
-                            <img className="skin-clinic" alt="Skin clinic" src="" />
-                        </div>
-                    </div>
-                </div>
+            <div className="logo">
+                <button onClick={''}>
+                    Drakon
+                </button>
             </div>
+            <div className="hcenter">
+                <ul className="hlist">
+                    <li><button onClick={''} className="text-wrapper">Home</button></li>
+                    <li><button onClick={''} className="text-wrapper">Shop</button></li>
+                    <li><button onClick={''} className="text-wrapper">About</button></li>
+                    <li><button onClick={''} className="text-wrapper">Contact</button></li>
+                </ul>
+            </div>
+            <div className="hright">
+                <ul className="hlist">
+                    <li><AlertOutlined  
+                        onClick={''}
+                        className="icon" 
+                        alt="alert"
+                    /></li>
+                    <li><SearchOutlined 
+                        onClick={''}
+                        className="icon" 
+                        alt="search"
+                    /></li>
+                    <li><HeartOutlined 
+                        onClick={''}
+                        className="icon"
+                        alt="heart"
+                    /></li>
+                    <li><ShoppingCartOutlined
+                        onClick={''}
+                        className="icon"
+                        alt="shopping"
+                    /></li>
+                    <li><UserOutlined
+                        onClick={''}
+                        className="icon"
+                        alt="shopping"
+                    /></li>
+                </ul>
+            </div> 
         </div>
     );
-};
+};  
 
 export default Header;

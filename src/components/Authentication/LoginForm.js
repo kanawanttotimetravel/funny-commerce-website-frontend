@@ -2,7 +2,7 @@
 
 import {useFormState} from 'react-dom'
 
-import FormInput from "@/components/FormInput";
+import FormInput from "@/components/Authentication/FormInput";
 import logIn from "@/apis/logIn";
 
 const LoginForm = () => {
@@ -14,8 +14,20 @@ const LoginForm = () => {
       </FormInput>
       <FormInput name={"password"} placeholder={"PASSWORD"} type={"password"}>
       </FormInput>
-      <button style={ButtonStyle} type="submit">Sign Up</button>
-
+      <button style={ButtonStyle} type="submit">Login</button>
+      {state && state.error && (
+        <div style={{
+          padding: 0,
+          margin: 0,
+        }}>
+          <p style={{
+            padding: 0,
+            margin: 0,
+          }}>
+            {state.error}
+          </p>
+        </div>
+      )}
     </form>
   )
 }
