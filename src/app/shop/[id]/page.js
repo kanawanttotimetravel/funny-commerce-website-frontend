@@ -6,7 +6,7 @@ import Header from "@/components/headercomponent/HeaderComponent";
 import {useEffect, useState} from "react";
 import {Poppins} from "next/font/google";
 import '../style.css'
-import RecommendSection from "@/components/atomic/RecommendSection";
+import RelatedProductSection from "@/components/atomic/RelatedProductSection";
 
 
 const poppins = Poppins({subsets: ['latin'], weight: "400"})
@@ -128,7 +128,7 @@ const Product = ({params}) => {
         </div>
       </div>
     </div>
-    <RecommendSection itemId={productId}></RecommendSection>
+    <RelatedProductSection itemId={productId}></RelatedProductSection>
   </>)
 }
 
