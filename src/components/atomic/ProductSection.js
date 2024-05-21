@@ -8,7 +8,7 @@ import axios from "axios";
 
 const poppins = Poppins({subsets: ['latin'], weight: "700"})
 
-const ProductSection = () => {
+const ProductSection = ({pageSize}) => {
   const [productList, setProductList] = useState([])
   const [page, setPage] = useState(1)
 
@@ -18,7 +18,7 @@ const ProductSection = () => {
         method: 'post',
         data: {
           page: page,
-          size: 16,
+          size: pageSize,
         }
       }
     )

@@ -5,6 +5,8 @@ import axios from "axios";
 import Header from "@/components/headercomponent/HeaderComponent";
 import {useEffect, useState} from "react";
 import {Poppins} from "next/font/google";
+import '../style.css'
+import RecommendSection from "@/components/atomic/RecommendSection";
 
 
 const poppins = Poppins({subsets: ['latin'], weight: "400"})
@@ -51,16 +53,7 @@ const Product = ({params}) => {
     }}>
       <img src={product.imageSrc}
            alt={`${product.imageSrc}`}
-           style={{
-             height: '30rem',
-             width: '30%',
-             objectFit: 'contain',
-             margin: '2rem 1rem',
-             padding: '0',
-             border: '1px',
-             borderStyle: 'solid',
-             display: 'block',
-           }}>
+           style={ImageStyle}>
 
       </img>
       <div style={{
@@ -68,7 +61,7 @@ const Product = ({params}) => {
         display: 'flex',
         flexDirection: 'column',
         margin: '2rem 1rem',
-        backgroundColor: 'grey',
+        // backgroundColor: 'grey',
         gap: '1rem'
       }}>
         <p style={{
@@ -135,7 +128,19 @@ const Product = ({params}) => {
         </div>
       </div>
     </div>
+    <RecommendSection itemId={productId}></RecommendSection>
   </>)
+}
+
+const ImageStyle = {
+  height: '30rem',
+  width: '30%',
+  objectFit: 'contain',
+  margin: '2rem 1rem',
+  padding: '0',
+  border: '1px',
+  borderStyle: 'solid',
+  display: 'block',
 }
 
 const ButtonStyle = {

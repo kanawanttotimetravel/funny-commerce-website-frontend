@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import Header from "@/components/headercomponent/HeaderComponent"
-import ProductSection from "@/components/ProductSection";
+import ProductSection from "@/components/atomic/ProductSection";
 import {getSession} from "@/apis/session";
 import {redirect} from "next/navigation";
 
