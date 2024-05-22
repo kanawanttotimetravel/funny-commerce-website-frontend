@@ -13,7 +13,7 @@
     left: 8%;
 }
 
-.header .logo >button {
+.header .logo >a {
     background: none;
     border: none;
     color: #000000;
@@ -43,6 +43,12 @@
 .header .hlist >li{
     padding: 20px;
     list-style-type: none;
+}
+
+.header .logo a,
+.header .hlist a {
+    text-decoration: none;
+    color: inherit; /* Giữ màu chữ như đã được định nghĩa */
 }
 
 .header .hright {

@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import Link from "next/link";
 import {
     ShoppingCartOutlined,
     HeartOutlined,
@@ -12,45 +13,45 @@ function Header() {
     return (
         <div className="header">
             <div className="logo">
-                <button onClick={''}>
+                <Link href={'/shop'} >
                     Drakon
-                </button>
+                </Link>
             </div>
             <div className="hcenter">
                 <ul className="hlist">
-                    <li><button onClick={''} className="text-wrapper">Home</button></li>
-                    <li><button onClick={''} className="text-wrapper">Shop</button></li>
-                    <li><button onClick={''} className="text-wrapper">About</button></li>
-                    <li><button onClick={''} className="text-wrapper">Contact</button></li>
+                    <li><Link href={'/shop'} className="text-wrapper">Home</Link></li>
+                    <li><Link href={'/shop'} className="text-wrapper">Shop</Link></li>
+                    <li><Link href={'/about'} className="text-wrapper">About</Link></li>
+                    <li><Link href={'/contact'} className="text-wrapper">Contact</Link></li>
                 </ul>
             </div>
             <div className="hright">
                 <ul className="hlist">
-                    <li><AlertOutlined  
-                        onClick={''}
-                        className="icon" 
-                        alt="alert"
-                    /></li>
-                    <li><SearchOutlined 
-                        onClick={''}
-                        className="icon" 
-                        alt="search"
-                    /></li>
-                    <li><HeartOutlined 
-                        onClick={''}
-                        className="icon"
-                        alt="heart"
-                    /></li>
-                    <li><ShoppingCartOutlined
-                        onClick={''}
-                        className="icon"
-                        alt="shopping"
-                    /></li>
-                    <li><UserOutlined
-                        onClick={''}
-                        className="icon"
-                        alt="shopping"
-                    /></li>
+                    <li>
+                        <Link href={'/alerts'}>
+                            <AlertOutlined className="icon" alt="alert" />
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href={'/search'}>
+                            <SearchOutlined className="icon" alt="search" />
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href={'/favorites'}>
+                            <HeartOutlined className="icon" alt="heart" />
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href={'/cart'}>
+                            <ShoppingCartOutlined className="icon" alt="shopping" />
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href={'/userprofile'}>
+                            <UserOutlined className="icon" alt="user" />
+                        </Link>
+                    </li>
                 </ul>
             </div> 
         </div>
