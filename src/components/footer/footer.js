@@ -6,7 +6,8 @@ const Footer = () => {
     <footer id="footer">
       <div className="footer-container">
         <div className="footer-brand">
-          <a href="#">Funiro</a>
+          <a href="#">Drakon</a>
+          <p>144 Xuân Thủy Dịch Vọng Hậu, Cầu Giấy, Hà Nội</p>
         </div>
         <div className="footer-links">
           <h4>Links</h4>
@@ -55,7 +56,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-copyright">
-        <p>&copy; 2023 Funiro. All rights reserved.</p>
+        <p>&copy; 2023 Drakon. All rights reserved.</p>
       </div>
     </footer>
   );
