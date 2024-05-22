@@ -8,7 +8,7 @@ import axios from "axios";
 
 const poppins = Poppins({subsets: ['latin'], weight: "700"})
 
-const RecommendSection = ({itemId}) => {
+const RelatedProductSection = ({itemId}) => {
   const [productList, setProductList] = useState([])
 
   const updateProduct = async () => {
@@ -58,4 +58,4 @@ const sectionStyle = {
   padding: 0,
   margin: 0
 }
-export default RecommendSection;
+export default RelatedProductSection;

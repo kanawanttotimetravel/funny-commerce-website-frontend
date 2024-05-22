@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react";
 import "./style.css";
 import Link from "next/link";
@@ -8,21 +10,25 @@ import {
     AlertOutlined,
     UserOutlined
 } from '@ant-design/icons';
+import {useRouter} from "next/navigation";
 
 function Header() {
+    const router = useRouter()
     return (
         <div className="header">
             <div className="logo">
-                <Link href={'/shop'} >
+                <Link href={'/'} >
                     Drakon
                 </Link>
             </div>
             <div className="hcenter">
                 <ul className="hlist">
+
                     <li><Link href={'/'} className="text-wrapper">Home</Link></li>
                     <li><Link href={'/shop'} className="text-wrapper">Shop</Link></li>
                     <li><Link href={'/about'} className="text-wrapper">About</Link></li>
                     <li><Link href={'/contact'} className="text-wrapper">Contact</Link></li>
+
                 </ul>
             </div>
             <div className="hright">
