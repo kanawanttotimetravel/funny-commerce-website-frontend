@@ -32,7 +32,7 @@ const Home = async () => {
         margin: 0,
         lineHeight: '150%'
       }}>
-        Our product
+        Recommended for you
       </p>
     </div>
     {/*<ProductSection></ProductSection>*/}

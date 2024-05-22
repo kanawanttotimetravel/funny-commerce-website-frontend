@@ -89,7 +89,7 @@ const Product = ({params}) => {
           fontStyle: 'normal',
           fontWeight: '500',
         }}>
-          Rating: {rating}
+          Rating: {rating} / 10
         </p>
         <p style={{
           ...TextStyle,
