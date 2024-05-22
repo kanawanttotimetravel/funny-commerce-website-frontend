@@ -19,7 +19,7 @@ function Header() {
             </div>
             <div className="hcenter">
                 <ul className="hlist">
-                    <li><Link href={'/shop'} className="text-wrapper">Home</Link></li>
+                    <li><Link href={'/'} className="text-wrapper">Home</Link></li>
                     <li><Link href={'/shop'} className="text-wrapper">Shop</Link></li>
                     <li><Link href={'/about'} className="text-wrapper">About</Link></li>
                     <li><Link href={'/contact'} className="text-wrapper">Contact</Link></li>
