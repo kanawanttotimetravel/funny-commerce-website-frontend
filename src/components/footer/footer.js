@@ -9,7 +9,8 @@ const Footer = () => {
     <footer id="footer">
       <div className="footer-container">
         <div className="footer-brand">
-          <a href="/">Drakon</a>
+          <a href="#">Drakon</a>
+          <p>144 Xuân Thủy Dịch Vọng Hậu, Cầu Giấy, Hà Nội</p>
         </div>
         <div className="footer-links">
           <h4>Links</h4>
@@ -46,7 +47,9 @@ const Footer = () => {
           logOut();
         }}>LOG OUT</button>
       </div>
-
+      <div className="footer-copyright">
+        <p>&copy; 2023 Drakon. All rights reserved.</p>
+      </div>
     </footer>
   );
 };
