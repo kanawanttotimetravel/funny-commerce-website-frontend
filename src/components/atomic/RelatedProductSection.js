@@ -8,27 +8,23 @@ import axios from "axios";
 
 const poppins = Poppins({subsets: ['latin'], weight: "700"})
 
-const ProductSection = () => {
+const RelatedProductSection = ({itemId}) => {
   const [productList, setProductList] = useState([])
-  const [page, setPage] = useState(1)
 
   const updateProduct = async () => {
     const pl = await axios({
-        url: (process.env.HOST && `${process.env.HOST}/Product/page`) || 'http://localhost:5000/Product/page',
-        method: 'post',
-        data: {
-          page: page,
-          size: 16,
-        }
+        url: (process.env.HOST && `${process.env.HOST}/Product/${itemId}/related`)
+          || `http://localhost:5000/Product/${itemId}/related`,
+        method: 'get',
       }
     )
-    setProductList(pl.data.data)
+    setProductList(pl.data)
     // return pl.data.data
   }
 
   useEffect(() => {
     updateProduct()
-  }, [page])
+  }, [])
 
   return (
     <div>
@@ -49,28 +45,10 @@ const ProductSection = () => {
           </li>))
         }
       </div>
-      <div style={{
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'center',
-        gap: '2rem',
-        margin: '2rem'
-      }}>
-        {page > 1 && <button style={buttonStyle} onClick={() => setPage(page - 1)} type="button">
-          PREV
-        </button>}
-        <button style={buttonStyle} onClick={() => setPage(page + 1)} type="button">
-          NEXT
-        </button>
-      </div>
     </div>
   )
 }
 
-const buttonStyle = {
-  width: '4rem',
-  height: '4rem',
-}
 
 const sectionStyle = {
   display: 'flex',
@@ -80,4 +58,4 @@ const sectionStyle = {
   padding: 0,
   margin: 0
 }
-export default ProductSection;
+export default RelatedProductSection;

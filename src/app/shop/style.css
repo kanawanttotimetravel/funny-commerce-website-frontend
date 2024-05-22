@@ -5,3 +5,7 @@ a:link {
 a:visited {
     text-decoration: none;
 }
+
+a:hover {
+    cursor: pointer;
+}

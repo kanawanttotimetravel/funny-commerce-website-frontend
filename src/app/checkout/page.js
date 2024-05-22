@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import "./style.css";
 import Header from "@/components/headercomponent/HeaderComponent";
-import FormInputCustom from "@/components/FormInputCustom";
+import FormInputCustom from "@/components/atomic/FormInputCustom";
 import item_card from "../listofproduct/productdata";
 import Footer from "@/components/footer/footer";
 

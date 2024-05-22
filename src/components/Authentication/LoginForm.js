@@ -4,6 +4,9 @@ import {useFormState} from 'react-dom'
 
 import FormInput from "@/components/Authentication/FormInput";
 import logIn from "@/apis/logIn";
+import Link from "next/link";
+
+import './style.css'
 
 const LoginForm = () => {
   const [state, action] = useFormState(logIn, undefined)
@@ -28,6 +31,7 @@ const LoginForm = () => {
           </p>
         </div>
       )}
+      <Link href={'/register'}> Register </Link>
     </form>
   )
 }
