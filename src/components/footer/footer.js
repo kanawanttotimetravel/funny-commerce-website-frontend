@@ -61,5 +61,6 @@ const ButtonStyle = {
   width: '18rem',
   height: '3rem',
   borderRadius: '0.25rem',
+  cursor: 'pointer',
 }
 export default Footer;
