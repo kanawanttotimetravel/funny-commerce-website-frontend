@@ -1,5 +1,8 @@
 import React from "react";
 import "./cartcomponents-style.css"; // Import your CSS file
+import {
+  DeleteFilled
+} from '@ant-design/icons';
 
 function Content() {
   return (
@@ -56,7 +59,7 @@ const ProductRow = ({ product }) => {
       <td>Rs. {product.price}.00</td>
       <td>{product.quantity}</td>
       <td>Rs. {product.subtotal}.00</td>
-      <td className="trash">trash icon</td>
+      <td className="trash"><DeleteFilled/></td>
     </tr>
   );
 };
