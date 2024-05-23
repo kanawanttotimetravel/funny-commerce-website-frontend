@@ -1,5 +1,8 @@
 .header-wrapper {
     padding-bottom: 92px;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .header {
