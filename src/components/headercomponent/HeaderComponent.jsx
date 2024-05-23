@@ -1,6 +1,6 @@
 'use client'
 
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 import Link from "next/link";
 import {
@@ -24,12 +24,10 @@ function Header() {
                 </div>
                 <div className="hcenter">
                     <ul className="hlist">
-
                         <li><Link href={'/'} className="text-wrapper">Home</Link></li>
                         <li><Link href={'/shop'} className="text-wrapper">Shop</Link></li>
                         <li><Link href={'/about'} className="text-wrapper">About</Link></li>
                         <li><Link href={'/contact'} className="text-wrapper">Contact</Link></li>
-
                     </ul>
                 </div>
                 <div className="hright">
@@ -40,9 +38,12 @@ function Header() {
                             </Link>
                         </li>
                         <li>
-                            <Link href={'/search'}>
-                                <SearchOutlined className="icon" alt="search" />
-                            </Link>
+                            <form class="search-box">
+                                <input type="text" name="" placeholder="Search for..." required class="input-search"/>
+                                <button type="submit" class="btn-search">
+                                    <SearchOutlined alt="search" className="icon"/>
+                                </button>
+                            </form>
                         </li>
                         <li>
                             <Link href={'/favorites'}>
