@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import "./cartcomponents-style.css";
 import { DeleteFilled } from "@ant-design/icons";
-import initialProducts from "./cartdata";
+import initialProducts from "../../app/cart/cartdata";
 import { useRouter } from 'next/navigation'
 
 function convertMoney(num, toCurrency = "VND") {

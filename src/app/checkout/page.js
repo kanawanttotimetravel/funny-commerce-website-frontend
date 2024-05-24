@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "./style.css";
 import Header from "@/components/headercomponent/HeaderComponent";
 import FormInputCustom from "@/components/atomic/FormInputCustom";
-import initialProducts from "@/components/cartcomponents/cartdata";
+import initialProducts from "../cart/cartdata";
 import Footer from "@/components/footer/footer";
 
 function CheckOutPage() {
