@@ -9,8 +9,7 @@ const Footer = () => {
     <footer id="footer">
       <div className="footer-container">
         <div className="footer-brand">
-          <a href="#">Drakon</a>
-          <p>144 Xuân Thủy Dịch Vọng Hậu, Cầu Giấy, Hà Nội</p>
+          <a href="/">Drakon</a>
         </div>
         <div className="footer-links">
           <h4>Links</h4>
