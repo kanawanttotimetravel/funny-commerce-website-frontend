@@ -3,22 +3,22 @@ import React, { useState } from "react";
 import "./style.css";
 import Header from "@/components/headercomponent/HeaderComponent";
 import FormInputCustom from "@/components/atomic/FormInputCustom";
-import item_card from "../listofproduct/productdata";
+import initialProducts from "@/components/cartcomponents/cartdata";
 import Footer from "@/components/footer/footer";
 
 function CheckOutPage() {
   const products = {};
-  item_card.forEach(item => {
-    if (!products[item.itemName]) {
+  initialProducts.forEach(item => {
+    if (!products[item.name]) {
       // Nếu tên sản phẩm chưa tồn tại, khởi tạo số lượng là 1
-      products[item.itemName] = {
-        name: item.itemName,
+      products[item.name] = {
+        name: item.name,
         price: item.price,
         quantity: 1
       };
     } else {
       // Nếu tên sản phẩm đã tồn tại, tăng số lượng lên 1
-      products[item.itemName].quantity++;
+      products[item.name].quantity++;
     }
   });
 
