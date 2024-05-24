@@ -22,7 +22,7 @@ const logIn = async (state, formData) => {
     password: formData.get('password'),
   })
   let userId = null;
-
+  let userType = null;
   const loginStatus = await axios({
     url: process.env.HOST || 'http://localhost:5000/login',
     method: 'post',
@@ -37,6 +37,7 @@ const logIn = async (state, formData) => {
       }
     }
     userId = res.data['userId']
+    userType = res.data['type']
     return {
       message: 'ok'
     }
@@ -50,7 +51,7 @@ const logIn = async (state, formData) => {
     }
   }
 
-  await createSession(userId).then(
+  await createSession(userId, userType).then(
     () => {
       console.log('Session created!')
     }, () => {
@@ -58,7 +59,11 @@ const logIn = async (state, formData) => {
     }
   )
   console.log('Success!')
-  redirect('/')
+  if (userType === 'admin') {
+    redirect('/admin')
+  } else {
+    redirect('/')
+  }
   // return validatedFields;
 }
 export default logIn;

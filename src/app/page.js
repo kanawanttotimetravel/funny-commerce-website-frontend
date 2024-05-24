@@ -1,21 +1,23 @@
 import Link from "next/link";
 
-import ProductSection from "@/components/ProductSection";
+import Header from "@/components/headercomponent/HeaderComponent"
+import ProductSection from "@/components/atomic/ProductSection";
 import {getSession} from "@/apis/session";
 import {redirect} from "next/navigation";
 
 import {Poppins} from "next/font/google";
+import RecommendProductSection from "@/components/atomic/RecommendProductSection";
+import Footer from "@/components/footer/footer";
 
 const poppins = Poppins({subsets: ['latin'], weight: "700"})
 
 const Home = async () => {
   const session = await getSession()
-  // console.log(session)
   if (!session) {
     redirect('/login')
   }
   return <>
-    {/*<Header></Header>*/}
+    <Header></Header>
     <div style={{
       display: 'flex',
       justifyContent: 'center',
@@ -29,14 +31,15 @@ const Home = async () => {
         margin: 0,
         lineHeight: '150%'
       }}>
-        Our product
+        Recommended for you
       </p>
     </div>
-    <ProductSection></ProductSection>
+    {/*<ProductSection></ProductSection>*/}
+    <RecommendProductSection userId={session.userId || ""}></RecommendProductSection>
     <div style={{
       display: 'flex',
       justifyContent: 'center',
-      marginTop: '2rem'
+      margin: '2rem 0'
     }}>
       <Link href='/shop'>
         <button style={buttonStyle}>
@@ -51,6 +54,7 @@ const Home = async () => {
         </button>
       </Link>
     </div>
+    <Footer></Footer>
   </>
 }
 

@@ -1,41 +1,73 @@
 .header {
-    background-color: #ffffff;
-    height: 100px;
-    width: 1440px;
+    justify-content: space-evenly;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #d9d9d9;
 }
 
-.header .group {
-    height: 41px;
-    left: 54px;
-    position: relative;
-    top: 29px;
-    width: 1286px;
+.header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 8%;
 }
 
-.header .overlap-group {
-    height: 41px;
-    position: relative;
+.header .logo >a {
+    background: none;
+    border: none;
+    color: #000000;
+    font-family: "Montserrat-Bold", Helvetica;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
 }
 
-.header .div {
-    height: 24px;
-    left: 451px;
-    position: absolute;
-    top: 9px;
-    width: 438px;
+.header .logo >p:active {
+    color: grey;
+}
+
+.header .hcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .hlist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .hlist >li{
+    padding: 20px;
+    list-style-type: none;
+}
+
+.header .logo a,
+.header .hlist a {
+    text-decoration: none;
+    color: inherit; /* Giữ màu chữ như đã được định nghĩa */
+}
+
+.header .hright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header .text-wrapper {
+    padding: 10px;
+    background: none;
+    border: none;
     color: #000000;
     font-family: "Poppins-Medium", Helvetica;
     font-size: 16px;
     font-weight: 500;
-    left: 0;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 0;
+    cursor: pointer;
 }
+
 .header .text-wrapper:hover {
     background-color: rgb(241, 240, 240);
 }
@@ -43,99 +75,6 @@
     color: grey;
 }
 
-.header .text-wrapper-2 {
-    color: #000000;
-    font-family: "Poppins-Medium", Helvetica;
-    font-size: 16px;
-    font-weight: 500;
-    left: 123px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 0;
-}
-
-.header .text-wrapper-3 {
-    color: #000000;
-    font-family: "Poppins-Medium", Helvetica;
-    font-size: 16px;
-    font-weight: 500;
-    left: 240px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 0;
-}
-
-.header .text-wrapper-4 {
-    color: #000000;
-    font-family: "Poppins-Medium", Helvetica;
-    font-size: 16px;
-    font-weight: 500;
-    left: 364px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 0;
-}
-
-.header .group-2 {
-    height: 41px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 1286px;
-}
-
-.header .mdi-account-alert {
-    height: 28px;
-    left: 1039px;
-    position: absolute;
-    top: 7px;
-    width: 28px;
-}
-
-.header .akar-icons-search {
-    height: 28px;
-    left: 1112px;
-    position: absolute;
-    top: 7px;
-    width: 28px;
-}
-
-.header .akar-icons-heart {
-    height: 28px;
-    left: 1185px;
-    position: absolute;
-    top: 7px;
-    width: 28px;
-}
-
-.header .ant-design-shopping {
-    height: 28px;
-    left: 1258px;
-    position: absolute;
-    top: 7px;
-    width: 28px;
-}
-
-.header .frame {
-    align-items: center;
-    display: inline-flex;
-    gap: 5px;
-    justify-content: center;
-    left: 0;
-    position: absolute;
-    top: 0;
-}
-
-.header .funny-commerce-logos {
-    height: 32px;
-    position: relative;
-    width: 50px;
-}
-
-.header .skin-clinic {
-    flex: 0 0 auto;
-    position: relative;
+.header .icon {
+    cursor: pointer;
 }

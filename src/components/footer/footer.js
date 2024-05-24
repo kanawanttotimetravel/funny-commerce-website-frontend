@@ -1,22 +1,26 @@
+'use client'
 import React from "react";
 import "./footer-style.css";
+
+import {logOut} from "@/apis/logOut";
 
 const Footer = () => {
   return (
     <footer id="footer">
       <div className="footer-container">
         <div className="footer-brand">
-          <a href="#">Drakon</a>
-          <p>144 Xuân Thủy Dịch Vọng Hậu, Cầu Giấy, Hà Nội</p>
+
+          <a href="/">Drakon</a>
+
         </div>
         <div className="footer-links">
           <h4>Links</h4>
           <ul>
             <li>
-              <a href="#">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
-              <a href="#">Shop</a>
+              <a href="/shop">Shop</a>
             </li>
             <li>
               <a href="#">About</a>
@@ -40,26 +44,21 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        {/* <div className="footer-newsletter">
-          <h4>Newsletter</h4>
-          <form action="#">
-            <input
-              className="email-input"
-              type="email"
-              name="email"
-              placeholder="Enter Email Address"
-            />
-            <button type="submit" className="submit">
-              SUBSCRIBE
-            </button>
-          </form>
-        </div> */}
+        <button style={ButtonStyle} onClick={() => {
+          logOut();
+        }}>LOG OUT</button>
       </div>
-      <div className="footer-copyright">
-        <p>&copy; 2023 Drakon. All rights reserved.</p>
-      </div>
+
     </footer>
   );
 };
-
+const ButtonStyle = {
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'center',
+  alignItems: 'center',
+  width: '18rem',
+  height: '3rem',
+  borderRadius: '0.25rem',
+}
 export default Footer;

@@ -1,4 +1,5 @@
 import LoginForm from "@/components/Authentication/LoginForm";
+
 const RegisterPage = () => {
   return (
     <div style={{

@@ -15,7 +15,7 @@ const SignUpFormSchema = z.object({
 
   password: z
   .string()
-  .min(8, {message: 'Be at least 8 characters long'})
+  .min(4, {message: 'Be at least 4 characters long'})
   .regex(/[a-zA-Z]/, {message: 'Contain at least one letter.'})
   .regex(/[0-9]/, {message: 'Contain at least one number.'})
   .trim(),
