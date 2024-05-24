@@ -40,7 +40,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="footer-newsletter">
+        {/* <div className="footer-newsletter">
           <h4>Newsletter</h4>
           <form action="#">
             <input
@@ -53,7 +53,7 @@ const Footer = () => {
               SUBSCRIBE
             </button>
           </form>
-        </div>
+        </div> */}
       </div>
       <div className="footer-copyright">
         <p>&copy; 2023 Drakon. All rights reserved.</p>

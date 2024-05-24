@@ -81,6 +81,16 @@
   margin-left: 6.3rem;
   margin-right: 6.3rem;
   border-top: 1px solid #d9d9d9;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+#footer .footer-brand p {
+  color: #00000094;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
 }
 
 #footer .email-input {
