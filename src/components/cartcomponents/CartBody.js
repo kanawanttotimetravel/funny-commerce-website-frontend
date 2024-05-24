@@ -1,33 +1,97 @@
-import React from "react";
-import "./cartcomponents-style.css"; // Import your CSS file
-import {
-  DeleteFilled
-} from '@ant-design/icons';
+"use client";
+
+import React, { useState } from "react";
+import "./cartcomponents-style.css";
+import { DeleteFilled } from "@ant-design/icons";
+
+function randomId() {
+  return Math.floor(Math.random() * 100000);
+}
+
+function convertMoney(num, toCurrency = "VND") {
+  const conversionRates = {
+    INR: 1,
+    VND: 1, // Example conversion rate
+  };
+
+  let convertedAmount = num;
+  if (toCurrency === "VND") {
+    convertedAmount = num * conversionRates[toCurrency];
+  }
+
+  return convertedAmount.toLocaleString("vi-VN", {
+    style: "currency",
+    currency: "VND",
+  });
+}
+
+const initialProducts = [
+  {
+    id: randomId(),
+    name: "Marceline",
+    price: 250000,
+    img: "https://i.pinimg.com/564x/b5/30/87/b530872823fe3bd8e3b44fe2276813cd.jpg",
+    quantity: 1,
+  },
+  {
+    id: randomId(),
+    name: "Marceline ver2",
+    price: 350000,
+    img: "https://i.pinimg.com/736x/dc/f7/7f/dcf77f294341e4a910575435e464dd2c.jpg",
+    quantity: 1,
+  },
+  {
+    id: randomId(),
+    name: "Marceline ver3",
+    price: 290000,
+    img: "https://i.pinimg.com/564x/02/89/04/02890480b8306ac1731eacefe1e28325.jpg",
+    quantity: 1,
+  },
+];
 
 function Content() {
+  const [products, setProducts] = useState(initialProducts);
+
+  const handleRemove = (id) => {
+    setProducts(products.filter((product) => product.id !== id));
+  };
+
+  const handleQuantityChange = (id, quantity) => {
+    setProducts(
+      products.map((product) =>
+        product.id === id
+          ? { ...product, quantity: parseInt(quantity) }
+          : product
+      )
+    );
+  };
+
+  const totalItems = products.reduce(
+    (acc, product) => acc + product.quantity,
+    0
+  );
+  const totalPrice = products.reduce(
+    (acc, product) => acc + product.price * product.quantity,
+    0
+  );
+
   return (
     <div className="container">
       <div className="block block-left">
-        <ProductTable />
+        <ProductTable
+          products={products}
+          onRemove={handleRemove}
+          onQuantityChange={handleQuantityChange}
+        />
       </div>
       <div className="block block-right">
-        <CartTotals />
+        <CartTotals totalItems={totalItems} totalPrice={totalPrice} />
       </div>
     </div>
   );
 }
 
-function ProductTable() {
-  const products = [
-    {
-      img: "https://i.pinimg.com/564x/25/3f/80/253f800eb997f9862e3f95f473ccccd8.jpg",
-      name: "Ranpo Edogawa",
-      price: 250000,
-      quantity: 1,
-      subtotal: 250000,
-    },
-  ];
-
+function ProductTable({ products, onRemove, onQuantityChange }) {
   return (
     <table className="product-table">
       <thead>
@@ -42,39 +106,64 @@ function ProductTable() {
       </thead>
       <tbody>
         {products.map((product) => (
-          <ProductRow key={product.name} product={product} />
+          <ProductRow
+            key={product.id}
+            product={product}
+            onRemove={onRemove}
+            onQuantityChange={onQuantityChange}
+          />
         ))}
       </tbody>
     </table>
   );
 }
 
-const ProductRow = ({ product }) => {
+const ProductRow = ({ product, onRemove, onQuantityChange }) => {
+  const handleQuantityChange = (e) => {
+    const value = e.target.value;
+    if (value > 0) {
+      onQuantityChange(product.id, value);
+    }
+  };
+
   return (
     <tr>
       <td className="image">
-        <img src={product.img} alt="" />
+        <img src={product.img} alt={product.name} />
       </td>
       <td>{product.name}</td>
-      <td>Rs. {product.price}.00</td>
-      <td>{product.quantity}</td>
-      <td>Rs. {product.subtotal}.00</td>
-      <td className="trash"><DeleteFilled/></td>
+      <td>{convertMoney(product.price)}</td>
+      <td>
+        <input
+          type="number"
+          className="quantity"
+          value={product.quantity}
+          onChange={handleQuantityChange}
+          min="1"
+        />
+      </td>
+      <td>{convertMoney(product.price * product.quantity)}</td>
+      <td className="trash">
+        <DeleteFilled
+          className="trash-icon"
+          onClick={() => onRemove(product.id)}
+        />
+      </td>
     </tr>
   );
 };
 
-function CartTotals() {
+function CartTotals({ totalItems, totalPrice }) {
   return (
     <div className="cart-totals">
       <h2>Cart Totals</h2>
       <div className="subtotal">
         <span>Subtotal</span>
-        <span>Rs. 250,000.00</span>
+        <span>{convertMoney(totalPrice)}</span>
       </div>
       <div className="total">
         <span>Total</span>
-        <span>Rs. 250,000.00</span>
+        <span>{convertMoney(totalPrice)}</span>
       </div>
       <button className="checkout-btn">Check Out</button>
     </div>

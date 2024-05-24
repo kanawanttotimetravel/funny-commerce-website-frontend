@@ -43,9 +43,20 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <button style={ButtonStyle} onClick={() => {
-          logOut();
-        }}>LOG OUT</button>
+        {/* <div className="footer-newsletter">
+          <h4>Newsletter</h4>
+          <form action="#">
+            <input
+              className="email-input"
+              type="email"
+              name="email"
+              placeholder="Enter Email Address"
+            />
+            <button type="submit" className="submit">
+              SUBSCRIBE
+            </button>
+          </form>
+        </div> */}
       </div>
       <div className="footer-copyright">
         <p>&copy; 2023 Drakon. All rights reserved.</p>
