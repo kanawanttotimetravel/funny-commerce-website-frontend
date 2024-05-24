@@ -9,7 +9,9 @@ const Footer = () => {
     <footer id="footer">
       <div className="footer-container">
         <div className="footer-brand">
+
           <a href="/">Drakon</a>
+
         </div>
         <div className="footer-links">
           <h4>Links</h4>
