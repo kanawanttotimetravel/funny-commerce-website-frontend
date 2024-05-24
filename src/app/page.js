@@ -13,7 +13,6 @@ const poppins = Poppins({subsets: ['latin'], weight: "700"})
 
 const Home = async () => {
   const session = await getSession()
-  console.log(session)
   if (!session) {
     redirect('/login')
   }
