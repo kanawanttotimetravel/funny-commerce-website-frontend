@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import "./cartcomponents-style.css";
 import { DeleteFilled } from "@ant-design/icons";
+import initialProducts from "../../app/cart/cartdata";
+import { useRouter } from 'next/navigation'
 
 function randomId() {
   return Math.floor(Math.random() * 100000);
@@ -24,6 +26,7 @@ function convertMoney(num, toCurrency = "VND") {
     currency: "VND",
   });
 }
+
 
 const initialProducts = [
   {
@@ -48,6 +51,7 @@ const initialProducts = [
     quantity: 1,
   },
 ];
+
 
 function Content() {
   const [products, setProducts] = useState(initialProducts);
@@ -154,6 +158,7 @@ const ProductRow = ({ product, onRemove, onQuantityChange }) => {
 };
 
 function CartTotals({ totalItems, totalPrice }) {
+  const router = useRouter()
   return (
     <div className="cart-totals">
       <h2>Cart Totals</h2>
@@ -165,7 +170,7 @@ function CartTotals({ totalItems, totalPrice }) {
         <span>Total</span>
         <span>{convertMoney(totalPrice)}</span>
       </div>
-      <button className="checkout-btn">Check Out</button>
+      <button className="checkout-btn" onClick={() => router.push('/checkout')}>Check Out</button>
     </div>
   );
 }
