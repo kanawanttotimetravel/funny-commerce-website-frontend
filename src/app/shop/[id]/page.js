@@ -162,7 +162,8 @@ const ButtonStyle = {
   width: '13rem',
   height: '4rem',
   border: '1px solid #000000',
-  borderRadius: '1rem'
+  borderRadius: '1rem',
+  cursor: 'pointer'
 }
 
 const TextStyle = {
