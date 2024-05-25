@@ -1,12 +1,5 @@
 const purchased_goods = [
     {
-        id:1,
-        imageSrc:"https://antimatter.vn/wp-content/uploads/2022/05/hinh-anh-bac-ho.jpg",
-        itemName: "hello",
-        itemType: "abc",
-        price:2000
-    },
-    {
         id:2,
         imageSrc:"https://haycafe.vn/wp-content/uploads/2022/06/anh-hoc-bai-hinh-ve-cute.jpg",
         itemName: "hello2",
