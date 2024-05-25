@@ -16,12 +16,22 @@ import SearchHistoryItem from "./SearchHistoryItem";
 function Header() {
     const [searchTerm, setSearchTerm] = useState("");
     const [searchHistory, setSearchHistory] = useState([]);
+    const [searchResults, setSearchResults] = useState([]);
 
-    const handleSearchSubmit = (e) => {
+    const handleSearchSubmit = async (e) => {
         e.preventDefault();
         if (searchTerm.trim() !== "") {
-            setSearchHistory([searchTerm, ...searchHistory]); // Chèn lần tìm kiếm gần nhất lên trên cùng
-            setSearchTerm(""); // Reset search term after adding to history
+            setSearchHistory([searchTerm, ...searchHistory]); // Add search term to history
+            try {
+                const response = await fetch(`http://localhost:5000/Search-product/${searchTerm}`);
+                const data = await response.json();
+                // Check if the response is an array, otherwise set it to an empty array
+                setSearchResults(Array.isArray(data) ? data : []);
+            } catch (error) {
+                console.error("Error fetching search results:", error);
+                setSearchResults([]); // Set search results to an empty array in case of error
+            }
+            setSearchTerm(""); // Reset search term
         }
     };
 
@@ -90,6 +100,13 @@ function Header() {
                         </li>
                     </ul>
                 </div>
+            </div>
+            <div className="search-results">
+                <ul>
+                    {searchResults.map((result, index) => (
+                        <li key={index}>{result.name}</li>
+                    ))}
+                </ul>
             </div>
         </div>
     );
