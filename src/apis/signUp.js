@@ -43,11 +43,12 @@ const signUp = async (state, formData) => {
   }
 
   const registerStatus = await axios({
-    url: process.env.HOST||'http://localhost:5000/register',
+    url: (process.env.HOST && `${process.env.HOST}/register`)||'http://localhost:5000/register',
     method: 'post',
     data: {
       username: validatedFields.data.name,
-      password: validatedFields.data.password
+      password: validatedFields.data.password,
+      type: 'buyer'
     }
   }).then((res) => {
     if (res.data['message'] !== 'ok') {

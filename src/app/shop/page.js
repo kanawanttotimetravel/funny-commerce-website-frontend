@@ -2,6 +2,7 @@ import Header from "@/components/headercomponent/HeaderComponent";
 import ProductSection from "@/components/atomic/ProductSection";
 
 import './style.css'
+import Footer from "@/components/footer/footer";
 const Page = () => {
     return (
         <div>
@@ -16,6 +17,7 @@ const Page = () => {
             {/*<div>*/}
             {/*    <FormInputCustom name="Hello" type="email" placeholder="Enter your email" width="20rem" />*/}
             {/*</div>*/}
+            <Footer></Footer>
         </div>
     );
 }

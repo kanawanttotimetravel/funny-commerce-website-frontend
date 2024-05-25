@@ -8,6 +8,7 @@ import {Poppins} from "next/font/google";
 import '../style.css'
 import RelatedProductSection from "@/components/atomic/RelatedProductSection";
 import {initializeSession} from "@/apis/utils";
+import Footer from "@/components/footer/footer";
 
 const poppins = Poppins({subsets: ['latin'], weight: "400"})
 
@@ -144,6 +145,7 @@ const Product = ({params}) => {
       </div>
     </div>
     <RelatedProductSection itemId={productId}></RelatedProductSection>
+    <Footer></Footer>
   </>)
 }
 

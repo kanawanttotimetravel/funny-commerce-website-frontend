@@ -32,7 +32,6 @@ const logIn = async (state, formData) => {
       password: validatedFields.data.password
     }
   }).then((res) => {
-    console.log(res)
     if (res.data['message'] !== 'ok') {
       return {
         message: res.data['message']
