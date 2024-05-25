@@ -23,8 +23,9 @@ const logIn = async (state, formData) => {
   })
   let userId = null;
   let userType = null;
+  const domain = process.env.HOST || 'https://localhost:5000'
   const loginStatus = await axios({
-    url: process.env.HOST || 'http://localhost:5000/login',
+    url:  `${domain}/login`,
     method: 'post',
     data: {
       username: validatedFields.data.name,

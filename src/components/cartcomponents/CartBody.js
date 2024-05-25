@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import "./cartcomponents-style.css";
 import { DeleteFilled } from "@ant-design/icons";
-import initialProducts from "../../app/cart/cartdata";
 import { useRouter } from 'next/navigation'
+import axios from "axios";
+import {initializeSession} from "@/apis/utils";
 
 function randomId() {
   return Math.floor(Math.random() * 100000);
@@ -54,8 +55,24 @@ const initialProducts = [
 
 
 function Content() {
-  const [products, setProducts] = useState(initialProducts);
-
+  const [products, setProducts] = useState([]);
+  const getCart = async () => {
+    const session = await initializeSession()
+    const userId = session['userId']
+    const request = await axios({
+      url: (process.env.HOST && `${process.env.HOST}/cart/get`)
+        || `http://localhost:5000/cart/get`,
+      method: 'post',
+      data: {
+        user_id: userId
+      },
+    })
+    const productList = request.data.data;
+    setProducts(productList)
+  }
+  useEffect(() => {
+    getCart()
+  },[])
   const handleRemove = (id) => {
     setProducts(products.filter((product) => product.id !== id));
   };

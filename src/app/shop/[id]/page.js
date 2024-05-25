@@ -7,7 +7,7 @@ import {useEffect, useState} from "react";
 import {Poppins} from "next/font/google";
 import '../style.css'
 import RelatedProductSection from "@/components/atomic/RelatedProductSection";
-
+import {initializeSession} from "@/apis/utils";
 
 const poppins = Poppins({subsets: ['latin'], weight: "400"})
 
@@ -26,7 +26,6 @@ const Product = ({params}) => {
     setProduct(req.data)
   }
 
-
   const updateRating = async () => {
     const req = await axios({
         url: (process.env.HOST && `${process.env.HOST}/rating`)
@@ -43,6 +42,23 @@ const Product = ({params}) => {
     updateProduct()
     updateRating()
   }, [])
+
+  const addToCart = async () => {
+    const session = await initializeSession()
+    const userId = session['userId']
+    const cartItem = {
+      ...product,
+      userId: userId,
+      quantity: addCount
+    }
+    const request = await axios({
+      url: (process.env.HOST && `${process.env.HOST}/cart/add`)
+        || `http://localhost:5000/cart/add`,
+      method: 'post',
+      data: cartItem,
+
+    })
+  }
 
   return (<>
     <Header></Header>
@@ -122,7 +138,7 @@ const Product = ({params}) => {
             </p>
             <a onClick={() => setAddCount(addCount + 1)}> + </a>
           </div>
-          <button style={ButtonStyle} onClick={() => console.log('cart')}>
+          <button style={ButtonStyle} onClick={addToCart}>
             <p style={TextStyle}> Add to cart </p>
           </button>
         </div>

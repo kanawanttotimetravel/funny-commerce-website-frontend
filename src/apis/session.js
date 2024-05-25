@@ -1,7 +1,7 @@
 import {cookies} from "next/headers";
 import 'dotenv/config'
 import {SignJWT, jwtVerify} from "jose";
-import axios from "axios";
+import {cache} from "react"
 
 const secretKey = process.env.SESSION_SECRET
 const encodedKey = new TextEncoder().encode(secretKey)
