@@ -1,6 +1,6 @@
 import LoginForm from "@/components/Authentication/LoginForm";
 
-const RegisterPage = () => {
+const LoginPage = () => {
   return (
     <div style={{
       backgroundColor: '#F8FFCA',
@@ -25,4 +25,4 @@ const BoxStyle = {
   justifyContent: 'center',
 }
 
-export default RegisterPage;
+export default LoginPage;

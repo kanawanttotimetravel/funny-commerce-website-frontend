@@ -42,24 +42,11 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        {/* <div className="footer-newsletter">
-          <h4>Newsletter</h4>
-          <form action="#">
-            <input
-              className="email-input"
-              type="email"
-              name="email"
-              placeholder="Enter Email Address"
-            />
-            <button type="submit" className="submit">
-              SUBSCRIBE
-            </button>
-          </form>
-        </div> */}
+        <button style={ButtonStyle} onClick={() => {
+          logOut();
+        }}>LOG OUT</button>
       </div>
-      <div className="footer-copyright">
-        <p>&copy; 2023 Drakon. All rights reserved.</p>
-      </div>
+
     </footer>
   );
 };
@@ -71,6 +58,5 @@ const ButtonStyle = {
   width: '18rem',
   height: '3rem',
   borderRadius: '0.25rem',
-  cursor: 'pointer',
 }
 export default Footer;

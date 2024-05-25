@@ -23,14 +23,16 @@ const logIn = async (state, formData) => {
   })
   let userId = null;
   let userType = null;
+  const domain = process.env.HOST || 'http://localhost:5000'
   const loginStatus = await axios({
-    url: process.env.HOST || 'http://localhost:5000/login',
+    url:  `${domain}/login`,
     method: 'post',
     data: {
       username: validatedFields.data.name,
       password: validatedFields.data.password
     }
   }).then((res) => {
+    console.log(res)
     if (res.data['message'] !== 'ok') {
       return {
         message: res.data['message']
