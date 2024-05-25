@@ -23,7 +23,7 @@ const logIn = async (state, formData) => {
   })
   let userId = null;
   let userType = null;
-  const domain = process.env.HOST || 'https://localhost:5000'
+  const domain = process.env.HOST || 'http://localhost:5000'
   const loginStatus = await axios({
     url:  `${domain}/login`,
     method: 'post',
@@ -32,6 +32,7 @@ const logIn = async (state, formData) => {
       password: validatedFields.data.password
     }
   }).then((res) => {
+    console.log(res)
     if (res.data['message'] !== 'ok') {
       return {
         message: res.data['message']

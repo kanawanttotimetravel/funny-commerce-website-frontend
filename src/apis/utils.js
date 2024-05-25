@@ -3,4 +3,4 @@
 import {getSession} from "@/apis/session";
 import {cache} from "react";
 
-export const initializeSession = cache( async () => {return await getSession()})
+export const initializeSession = async () => {return await getSession()}

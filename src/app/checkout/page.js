@@ -1,14 +1,33 @@
 "use client";
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import "./style.css";
 import Header from "@/components/headercomponent/HeaderComponent";
 import FormInputCustom from "@/components/atomic/FormInputCustom";
-import initialProducts from "../cart/cartdata";
 import Footer from "@/components/footer/footer";
+import axios from "axios";
+import {initializeSession} from "@/apis/utils";
 
 function CheckOutPage() {
-  const products = {};
-  initialProducts.forEach(item => {
+  const [products, setProducts] = useState([])
+  const updateProduct = async () => {
+    const session = await initializeSession()
+    const userId = session['userId']
+    const request = await axios({
+      url: (process.env.HOST && `${process.env.HOST}/cart/get`)
+        || `http://localhost:5000/cart/get`,
+      method: 'post',
+      data: {
+        user_id: userId
+      },
+    });
+    setProducts(request.data.data)
+    console.log(request.data.data)
+  }
+  useEffect(() => {
+    updateProduct()
+  }, []);
+
+  products.forEach(item => {
     if (!products[item.name]) {
       // Nếu tên sản phẩm chưa tồn tại, khởi tạo số lượng là 1
       products[item.name] = {
@@ -22,17 +41,17 @@ function CheckOutPage() {
     }
   });
 
-  const productList = Object.values(products).map(product => (
+  const productList = products.map(product => (
     <div key={product.name} className="product-row">
       <p className="product-name">
-        <span className="product-name-text">{product.name}</span>
+        <span className="product-name-text" >{product.name}</span>
         {product.quantity > 1 && <span className="product-quantity"> x{product.quantity}</span>}
       </p>
       <p>{product.price * product.quantity} VND</p>
     </div>
   ));
 
-  const totalPrice = Object.values(products).reduce((total, product) => {
+  const totalPrice = products.reduce((total, product) => {
     return total + (product.price * product.quantity);
   }, 0);
 

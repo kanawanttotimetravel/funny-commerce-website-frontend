@@ -49,14 +49,13 @@ const Product = ({params}) => {
     const cartItem = {
       ...product,
       userId: userId,
-      quantity: addCount
+      quantity: Math.max(1, addCount)
     }
     const request = await axios({
       url: (process.env.HOST && `${process.env.HOST}/cart/add`)
         || `http://localhost:5000/cart/add`,
       method: 'post',
       data: cartItem,
-
     })
   }
 
