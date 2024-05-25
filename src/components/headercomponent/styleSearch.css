@@ -103,3 +103,7 @@ SearchHistory
 .search-history-item.selected {
     background-color: #e6e6e68e;
 }
+
+.search-results {
+    position: relative
+}
