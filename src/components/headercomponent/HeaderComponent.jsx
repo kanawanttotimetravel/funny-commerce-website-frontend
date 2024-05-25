@@ -104,17 +104,16 @@ function Header() {
                     </div>
                 </div>
             </div>
-            <div className="search-results">
-                <ul>
+            <div className="search-results-wrapper">
+                <ul className="search-results">
                     {searchResults.map((result, index) => (
-                        // <li key={index}>{result.name}</li>
-                        <ItemCard
-                            key={index}
-                            imageSrc={result.image}
-                            itemName={result.product_name}
-                            itemType={result.info}
-                            price={result.price}
-                        />
+                        <Link href={{
+                            pathname: `/shop/${result._id}`,
+                        }}>
+                            <ItemCard key={index} imageSrc={result.image} itemName={result.name} itemType={result.info}
+                                    price={result.price}>
+                            </ItemCard>
+                        </Link>
                     ))}
                 </ul>
             </div>

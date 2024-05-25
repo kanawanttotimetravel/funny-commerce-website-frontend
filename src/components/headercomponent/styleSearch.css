@@ -104,6 +104,14 @@ SearchHistory
     background-color: #e6e6e68e;
 }
 
+.search-results-wrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
 .search-results {
-    position: relative
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
 }
