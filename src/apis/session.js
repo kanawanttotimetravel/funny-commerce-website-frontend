@@ -1,6 +1,7 @@
 import {cookies} from "next/headers";
 import 'dotenv/config'
 import {SignJWT, jwtVerify} from "jose";
+import {cache} from "react"
 
 const secretKey = process.env.SESSION_SECRET
 const encodedKey = new TextEncoder().encode(secretKey)
@@ -24,9 +25,9 @@ export async function decrypt(session) {
   }
 }
 
-export const createSession = async (userId) => {
+export const createSession = async (userId, userType) => {
   const expireAt = new Date(Date.now() + 24 * 60 * 60 * 1000)
-  const session = await encrypt({userId, expireAt})
+  const session = await encrypt({userId, expireAt, userType})
   cookies().set('session', session, {
     httpOnly: true,
     secure: true,

@@ -59,11 +59,14 @@
     display: flex;
     justify-content: space-between;
 }
-  
+.product-name {
+    max-width: 70%;
+}
+
 .product-name-text {
     color: #9f9f9f;
     font-family: "Poppins-Regular", Helvetica;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
 }
 .productname-price {

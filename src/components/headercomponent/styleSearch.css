@@ -1,0 +1,105 @@
+.search-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    transition: all .5s ease-in-out;
+}
+
+/* .input-search-wrapper {
+    border: none;
+    outline: none;
+    width: 0;
+    padding: 0;
+    background:transparent;
+} */
+
+.input-search{
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 0;
+    padding: 0;
+    letter-spacing: 1px;
+    outline: none;
+    color:#000000;
+    background:transparent;
+    transition: all 0.25s ease-in-out;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 200;
+}
+
+.search-box:hover .input-search,
+.search-box:focus-within .input-search {
+    width: 15rem;
+    padding: 5px;
+    margin-right: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    background-color: rgb(253, 252, 193);
+}
+
+.input-search::placeholder{
+    color:rgba(70, 70, 70, 0.5);
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 100;
+}
+
+.btn-search{
+    border: none;
+    padding: 0;
+    font-size: 16px;
+    outline: none;
+    position: relative;
+    right: 0px;
+    background-color:transparent;
+}
+
+/*
+<---------------------------------------------------------------------------------------------------------------------------------------------------->
+SearchHistory
+*/
+
+.search-history {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 90%;
+    box-shadow:1px 1px 1px 1px #666;
+    background-color: white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    visibility: hidden; /* Ẩn thanh lịch sử mặc định */
+    opacity: 0; /* Ẩn thanh lịch sử mặc định */
+    transition: visibility 0s, opacity 0.5s ease; /* Áp dụng hiệu ứng transition */
+}
+
+.search-box:focus-within .search-history {
+    visibility: visible; /* Hiển thị thanh lịch sử khi search input được focus */
+    opacity: 1; /* Hiển thị thanh lịch sử khi search input được focus */
+}
+
+.search-history-list {
+    padding-left: 0;
+    list-style: none;
+    max-height: 200px; /* Thiết lập chiều cao tối đa */
+    overflow-y: auto; /* Tạo thanh cuộn ngang khi cần */
+}
+
+.search-history-item {
+    height: 38px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.search-history-item:hover {
+    background-color: #e6e6e68e;
+}
+
+.search-history-item.selected {
+    background-color: #e6e6e68e;
+}

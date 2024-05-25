@@ -1,5 +1,3 @@
-import FormInput from "@/components/Authentication/FormInput";
-import FormInputCustom from "@/components/atomic/FormInputCustom";
 import Header from "@/components/headercomponent/HeaderComponent";
 import ProductSection from "@/components/atomic/ProductSection";
 
